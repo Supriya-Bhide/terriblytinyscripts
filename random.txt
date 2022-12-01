@@ -1,0 +1,6 @@
+1. How to save changes in bashrc:
+save the change in bashrc.
+$ source ~/.bashrc
+
+
+

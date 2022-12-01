@@ -1,0 +1,79 @@
+#write a pass Pass.cpp
+#create an empty file Pass.exports
+#and a CMakeLists.txt file
+
+🔸️
+$ cd ../llvm-project/llvm/lib/Transforms
+$ mkdir Pass
+$ cd Pass
+$ subl Pass.cpp
+$ subl Pass.exports
+$ subl CMakeLists.txt
+
+$ cd ..     #You will goback to "Transforms dir via this command
+$ subl CMakeLists.txt
+$ cd ../llvm-project/build
+$ ninja  #this command builds the pass
+$ cd build/Testcases     #This folder contains the C/CPP files to be run through the pass
+$ clang -emit-llvm -c c_file_clanged.c -o c_file_clanged.bc
+$ ../../build/bin/opt -enable-new-pm=0 -load ../../build/lib/XXX.so -passname <c_file_clanged.bc>/dev/null
+🔸️
+
+Example: 
+$ clang -emit-llvm -c hello.c -o hello.bc
+$ ../../build/bin/opt -enable-new-pm=0 -load ../../build/lib/LLVMMyHello1.so -myhello1 <hello.bc>/dev/null
+
+💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️💠️
+
+WITH EXPLANANTION:
+#write a pass Pass.cpp
+#create an empty file Pass.exports
+#and a CMakeLists.txt file
+
+🔸️
+$ cd ../llvm-project/llvm/lib/Transforms
+$ mkdir Pass
+$ cd Pass
+$ subl Pass.cpp
+$ subl Pass.exports
+$ subl CMakeLists.txt
+🔸️
+	..Transforms/Pass/CMakeLists.txt:
+
+	add_llvm_library( XXX MODULE
+	MyHello.cpp
+	DEPENDS
+	intrinsics_gen
+	PLUGIN_TOOL
+	opt )
+
+🔸️
+$ cd ..     #You will goback to "Transforms dir via this command
+$ subl CMakeLists.txt
+🔸️
+
+	../Transforms/CMakeLists.txt
+
+	.
+	.
+	..
+	add_subdirectory(Pass)
+
+🔸️
+$ cd ../llvm-project/build
+$ ninja  #this command builds the pass
+$ cd build/Testcases     #This folder contains the C/CPP files to be run through the pass
+$ clang -emit-llvm -c c_file_clanged.c -o c_file_clanged.bc
+$ ../../build/bin/opt -enable-new-pm=0 -load ../../build/lib/XXX.so -passname <c_file_clanged.bc>/dev/null
+🔸️
+
+Example: 
+$ clang -emit-llvm -c hello.c -o hello.bc
+$ ../../build/bin/opt -enable-new-pm=0 -load ../../build/lib/LLVMMyHello1.so -myhello1 <hello.bc>/dev/null
+
+OUTPUT:
+MyHello1 new: call_f1
+MyHello1 new: main
+
+
+

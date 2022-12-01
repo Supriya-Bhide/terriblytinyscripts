@@ -1,0 +1,42 @@
+#Setup and install git
+sudo apt install git-all
+git config --list --show-origin
+supriya@supriya:~$ git config --global user.name "Supriya-Bhide"
+supriya@supriya:~$ git config --global user.email bsupriyanandubhide@gmail.com
+
+cd path/to/dir/for/version/control
+
+git init
+git add *.c
+git add LICENSE   #may not work
+git commit -m 'version_N'
+
+git config -l
+git clone 'https://github.com/Supriya-Bhide/PhD_Backup.git'
+#pswd: is PAT (on gmail)
+
+#to change:
+git checkout newBranch
+#do changes
+git add --all
+git commit -m 'newBranch_v1'
+
+#merge with master
+git checkout master
+git merge newBranch
+#delete branch
+git branch -d newBranch
+
+##Pull/push to github:
+git remote add origin_name https://github.com/Supriya-Bhide/PhD_Backup.git
+git push --set-upstream origin master
+
+[OR]
+
+git clone https://github.com/Supriya-Bhide/Repo-Name.git
+cd Repo-Name
+git remote add origin_name https://github.com/Supriya-Bhide/Repo-Name.git
+git add .
+git commit -m "sm msg"
+git push -u origin_name main
+
