@@ -1,5 +1,6 @@
 #!/bin/bash
 #Author: Supriya-Bhide
+#Purpose: Locks screen at a set time
 # ---------------------------------------------------------.
 # Required installations before your execute this script:  \
 #							   \
