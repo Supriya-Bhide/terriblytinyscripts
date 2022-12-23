@@ -5,9 +5,14 @@ then
 	echo "./pushScript2Git.sh < repositoryName(without '.git' extension) >"
 	exit
 fi
+version=$2
+if [ -z "$2" ]
+then
+	version=2
+fi
 
 git remote add origin1 https://github.com/Supriya-Bhide/$1.git
 git branch -M main
 git add .
-git commit -m "v1"
+git commit -m "v$version"
 git push -u origin1 main
