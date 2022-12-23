@@ -1,4 +1,5 @@
-echo $1
+#PushScripttoGit
+
 if [ -z "$1" ]
 then
 	echo "Enter in the following format:"
