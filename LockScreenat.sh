@@ -10,7 +10,8 @@
 
 
 #To check if the argument time has been given
-if [ -z "$1" ] || ["$1" -ne "??:??"]
+
+if [ -z "$1" ] || [ "$1" != "??:??" ]
 then
 	echo "Oops! Time not found. When do you want me to lock your system?"
 	echo "Execute the script in the following format:"
@@ -20,7 +21,7 @@ then
 	exit
 fi
 
-echo "Sure things! It is $(date "+%R") right now. I will lock screen at $1."
+echo "Sure things! It is $(date "+%R") right now. I will lock your screen at $1."
 
 
 echo gnome-screensaver-command -l | at $1                                     #Locks the system at the given time
