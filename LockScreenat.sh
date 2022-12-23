@@ -8,7 +8,7 @@
 #2. sudo apt-get install at			 	   \
 # ---------------------------------------------------------.
 
-
+#modifed: second condition in 'if' corrected
 #To check if the argument time has been given
 
 if [ -z "$1" ] || [[ "$1" != ??:?? ]]
