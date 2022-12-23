@@ -10,7 +10,7 @@ if [ -z "$2" ]
 then
 	version=2
 fi
-
+echo "version is $1"
 git remote add origin1 https://github.com/Supriya-Bhide/$1.git
 git branch -M main
 git add .
