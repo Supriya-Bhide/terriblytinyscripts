@@ -25,4 +25,4 @@ fi
 echo "Sure things! It is $(date "+%R") right now. I will lock your screen at $1."
 
 #Locks the system at the given time
- echo echo gnome-screensaver-command -l | at "$1"  ||  echo "Time provided is wrong. Please provide the correct time in 24 hour format HH:MM" 
+echo gnome-screensaver-command -l | at "$1"
