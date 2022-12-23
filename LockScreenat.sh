@@ -13,7 +13,7 @@
 
 if [ -z "$1" ] || [ "$1" != "??:??" ]
 then
-	echo "Oops! Time not found. When do you want me to lock your system?"
+	echo "Oops! Time not found. When do you want me to lock your screen?"
 	echo "Execute the script in the following format:"
 	echo "---------------------------"
 	echo "|./LockScreenat.sh  HH:MM |"
