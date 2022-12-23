@@ -18,6 +18,6 @@ git remote add origin1 https://github.com/Supriya-Bhide/$1.git
 git branch -M main
 git add .
 git commit -m "v$version"
-echo -e "...."
+echo -e "....\n"
 
 git push -f -u origin1 main
