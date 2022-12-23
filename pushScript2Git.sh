@@ -11,7 +11,7 @@ if [ -z "$2" ]
 then
 	version=2
 fi
-echo -e "Adding version $2 to Repository: $1\n"
+echo -e "\n----\nAdding version $2 to Repository: $1\n----\n"
 
 git remote add origin1 https://github.com/Supriya-Bhide/$1.git
 git branch -M main
