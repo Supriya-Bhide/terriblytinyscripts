@@ -24,5 +24,4 @@ fi
 
 echo "Sure things! It is $(date "+%R") right now. I will lock your screen at $1."
 
-#Locks the system at the given time
-echo gnome-screensaver-command -l | at "$1"
+echo gnome-screensaver-command -l | at "$1"                                           #Locks the system at the given time
