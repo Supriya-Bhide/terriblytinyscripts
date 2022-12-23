@@ -2,7 +2,7 @@ echo $1
 if [ -z "$1" ]
 then
 	echo "Enter in the following format:"
-	echo "./pushScript2Git.sh < repositoryName(without '.git' extension) >"
+	echo "./pushScript2Git.sh < repositoryName(without '.git' extension) > version_Number"
 	exit
 fi
 version=$2
