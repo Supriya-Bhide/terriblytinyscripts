@@ -19,4 +19,5 @@ git branch -M main
 git add .
 git commit -m "v$version"
 echo -e "......................................................"
+echo
 git push -f -u origin1 main
