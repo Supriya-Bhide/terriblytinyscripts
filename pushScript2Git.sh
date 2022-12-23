@@ -13,11 +13,11 @@ then
 fi
 echo -e "\n----\nAdding version $2 to Repository: $1\n----\n"
 
-echo -e "\n...."
+echo ""
 git remote add origin1 https://github.com/Supriya-Bhide/$1.git
 git branch -M main
 git add .
 git commit -m "v$version"
-echo -e "....\n"
+echo ""
 
 git push -f -u origin1 main
