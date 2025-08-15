@@ -5,6 +5,7 @@
 sudo apt install cmake
 sudo apt install ninja-build
 sudo apt install clang
+sudo apt install git
 
 mkdir packages
 cd packages

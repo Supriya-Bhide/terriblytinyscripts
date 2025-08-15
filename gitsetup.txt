@@ -40,3 +40,14 @@ git add .
 git commit -m "sm msg"
 git push -u origin_name main
 
+
+
+[OR]
+git init
+git add .
+git commit -m "sm msg"
+git branch -M main
+git remote add origin_name https://github.com/Supriya-Bhide/Repo-Name.git
+git push -u origin_name main
+
+[DONE]

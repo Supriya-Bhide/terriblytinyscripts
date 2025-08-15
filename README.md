@@ -20,8 +20,12 @@
 
 10. LockScreenat.sh         Locks screen at the set time
 
+11. gitCLoneBranch.sh       Clones a specific branch of repository
 
-##How to run: 
+##How to run first time: 
 $ chmod +x <scriptname.sh>
 $ ./scriptname.sh
+
+#The scripts can then be run from anywhere in this PC now as  <Do NOT use >:
+$ script.sh
 
