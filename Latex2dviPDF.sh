@@ -17,7 +17,8 @@
 ## sty files now sourced from TEXINPUT setup in ~/.bashrc
 latex  $1.tex
 bibtex $1
-dvipdf $1.dvi
+dvips $1.dvi
+ps2pdf -dALLOWPSTRANSPARENCY $1.ps
 evince $1.pdf &
 
 if [ "$2" = "-b" ]; then
