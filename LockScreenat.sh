@@ -24,4 +24,5 @@ fi
 
 echo "Sure things! It is $(date "+%R") right now. I will lock your screen at $1." #(warnings have been hidden)"
 
-echo gnome-screensaver-command -l | at "$1"    2> /dev/null                                       #Locks the system at the given time #2>devv/null hides all warnings
+# echo gnome-screensaver-command -l | at "$1"    2> /dev/null                                       #Locks the system at the given time #2>devv/null hides all warnings
+echo loginctl lock-session | at "$1"  #updated script
