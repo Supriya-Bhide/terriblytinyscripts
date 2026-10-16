@@ -15,27 +15,31 @@
 #     cp ~/PhD/sty-tex-files/quest.def .
 # fi
 ## sty files now sourced from TEXINPUT setup in ~/.bashrc
+
+# Get the base name (remove extension)
+BASE=$(echo "$1" | sed 's/\.[^.]*$//')
+
 if [ "$2" = "-x" ]; then
     # Compile with XeLaTeX (system fonts, fontspec work here)
-    xelatex -shell-escape "$1.tex"
-    bibtex "$1"
-    xelatex -shell-escape "$1.tex"
-    xelatex -shell-escape "$1.tex"
+    xelatex -shell-escape "$BASE.tex"
+    bibtex "$BASE"
+    xelatex -shell-escape "$BASE.tex"
+    xelatex -shell-escape "$BASE.tex"
 else
-	latex  $1.tex
-	bibtex $1
-	dvips $1.dvi
-	ps2pdf -dALLOWPSTRANSPARENCY $1.ps
-#	evince $1.pdf &
+	latex  $BASE.tex
+	bibtex $BASE
+	dvips $BASE.dvi
+	ps2pdf -dALLOWPSTRANSPARENCY $BASE.ps
+#	evince $BASE.pdf &
 fi
 
 if [ "$2" = "-b" ]; then
 	for((i=1; i<=2; i++)); do
-		latex  $1.tex
-		bibtex $1
-		dvips $1.dvi
-                ps2pdf -dALLOWPSTRANSPARENCY $1.ps
+		latex  $BASE.tex
+		bibtex $BASE
+		dvips $BASE.dvi
+                ps2pdf -dALLOWPSTRANSPARENCY $BASE.ps
 	done
 fi
-evince $1.pdf &
-#code $1.pdf &
+evince $BASE.pdf &
+#code $BASE.pdf &
